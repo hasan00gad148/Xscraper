@@ -33,12 +33,12 @@ This project is a Node.js application that scrapes Twitter accounts to count men
 Run the scraper with the following command:
 
 ```
-node scraper.js <path_to_accounts_file> <ticker_symbol> <interval_in_minutes>
+node ./src/scraper.js <path_to_accounts_file> <ticker_symbol> <interval_in_minutes>
 ```
 
 For example:
 ```
-node scraper.js accounts.txt $AAPL 15
+node ./src/scraper.js accounts.txt $AAPL 15
 ```
 
 This will:
@@ -46,14 +46,22 @@ This will:
 2. Search for mentions of '$AAPL'
 3. Run every 15 minutes
 
+
+
+For quick test: 
+```
+npm run scrape  //to run the javaScript
+or 
+npm run scrapeTS  //to run the typeScript
+```
+
 ## Configuration
 - `accounts.txt`: A text file containing Twitter account URLs, one per line.
 - `ticker`: The stock symbol to search for in tweets.
 - `scrapeInterval`: The interval between scraping runs, in minutes.
 
 ## Output
-The script will print the number of times the specified ticker was mentioned across all accounts in the given time interval.
-
+The script will print the number of times the specified ticker was mentioned across all accounts.
 ## Limitations
 
 - This scraper does not use Twitter's official API and may be subject to rate limiting or blocking.
