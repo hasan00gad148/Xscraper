@@ -1,0 +1,25 @@
+{
+  "name": "xscraper",
+  "version": "1.0.0",
+  "description": "twitter scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape": "node ./src/scraper.js ./accounts.txt $TSLA 15",
+    "scrapeTS": "tsc && node ./dist/scraper.js ./accounts.txt $TSLA 15"
+  },
+  "author": "Hasan Gad",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "puppeteer": "^23.2.1",
+    "random-useragent": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/puppeteer": "^7.0.4",
+    "@types/random-useragent": "^0.3.3",
+    "typescript": "^5.5.4"
+  }
+}
