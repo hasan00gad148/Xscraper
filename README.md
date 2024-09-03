@@ -19,8 +19,8 @@ This project is a Node.js application that scrapes Twitter accounts to count men
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/twitter-ticker-scraper.git
-   cd twitter-ticker-scraper
+   git clone https://github.com/hasan00gad148/Xscraper/
+   cd Xscraper
    ```
 
 2. Install the dependencies:
