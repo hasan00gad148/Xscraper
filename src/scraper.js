@@ -12,7 +12,7 @@ const accountsPath = process.argv[2]
 const accounts = fs.readFileSync(accountsPath, 'utf-8').split(/\r?\n/);
 
 const ticker = process.argv[3]; // Stock symbol to look for
-const scrapeInterval = Number(process.argv[4]) * 60 * 1000; // 15 minutes in milliseconds
+const scrapeInterval = Number(process.argv[4]) * 60 * 1000; // X minutes in milliseconds
 
 // Function to scrape a Twitter account
 async function scrollTOloadMoreContent(page){
@@ -91,8 +91,6 @@ async function runScraper() {
   browser.close()
   // Output the result
   console.log(`'${ticker}' was mentioned '${totalMentions}' times in the last '${scrapeInterval / 60000}' minutes.`);
-
-  // Wait for the next scrape session
 
 }
 
